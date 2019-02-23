@@ -79,16 +79,19 @@
 
 
 
-<meta name="description" content="大白博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="baymax">
-<meta property="og:url" content="http://lianjy357.coding.me/baymax/index.html">
+<meta name="description" content="时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【手把手教你】时间序列之日期处理">
+<meta property="og:url" content="http://lianjy357.coding.me/baymax/2019/02/23/【手把手教你】时间序列之日期处理/index.html">
 <meta property="og:site_name" content="baymax">
-<meta property="og:description" content="大白博客">
+<meta property="og:description" content="时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://lianjy357.coding.me/baymax/2019/02/23/【手把手教你】时间序列之日期处理/output_24_1.png">
+<meta property="og:updated_time" content="2019-02-23T10:36:43.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="baymax">
-<meta name="twitter:description" content="大白博客">
+<meta name="twitter:title" content="【手把手教你】时间序列之日期处理">
+<meta name="twitter:description" content="时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和">
+<meta name="twitter:image" content="http://lianjy357.coding.me/baymax/2019/02/23/【手把手教你】时间序列之日期处理/output_24_1.png">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://lianjy357.coding.me/baymax/">
+  <link rel="canonical" href="http://lianjy357.coding.me/baymax/2019/02/23/【手把手教你】时间序列之日期处理/">
 
 
 
 
 
-  <title>baymax</title>
+  <title>【手把手教你】时间序列之日期处理 | baymax</title>
   
 
 
@@ -143,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +219,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +251,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baymax/2019/02/23/【手把手教你】时间序列之日期处理/" itemprop="url">【手把手教你】时间序列之日期处理</a></h1>
+          <h1 class="post-title" itemprop="name headline">【手把手教你】时间序列之日期处理</h1>
         
 
         <div class="post-meta">
@@ -301,9 +301,7 @@
       
 
       
-        
-          
-            <p>时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和滤波控制等。在使用Python分析时间序列时，经常会碰到时间日期格式处理和转换问题，尤其在可视化分析和分时期统计方面。本文作为时间序列分析的入门指引之一，将着重介绍如何利用Python处理日期和分时期统计分析，希望能起到抛砖引玉的作用。</p>
+        <p>时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和滤波控制等。在使用Python分析时间序列时，经常会碰到时间日期格式处理和转换问题，尤其在可视化分析和分时期统计方面。本文作为时间序列分析的入门指引之一，将着重介绍如何利用Python处理日期和分时期统计分析，希望能起到抛砖引玉的作用。</p>
 <p>先引入数据分析和画图常用库，pandas、numpy、matplotlib以及中文乱码处理，画图也可以使用pyecharts、seaborn、bokeh等</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"><span class="comment"># 解决正常显示画图时出现的中文和负号</span></span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> mpl</span><br><span class="line">mpl.rcParams[<span class="string">'font.sans-serif'</span>]=[<span class="string">'SimHei'</span>]</span><br><span class="line">mpl.rcParams[<span class="string">'font.family'</span>]=<span class="string">'sans-serif'</span></span><br><span class="line">mpl.rcParams[<span class="string">'axes.unicode_minus'</span>]=<span class="keyword">False</span></span><br></pre></td></tr></table></figure>
 <h1 id="datetime处理日期"><a href="#datetime处理日期" class="headerlink" title="datetime处理日期"></a>datetime处理日期</h1><p>python常用的处理时间的库有：datetime,time,calendar。datetime库包括了date（储存日期：(年、月、日),time(储存时间：(小时、分、秒和微秒)，datetime同时包含了data和time，timedelta代表两个datetime之间的差（天、秒、微秒）。</p>
@@ -502,8 +500,6 @@ FileNotFoundError                         Traceback (most recent call last)
 FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
 </code></pre><p>未完待续，由于数据导入问题，无法正确的获取Table.xlsx</p>
 --></p>
-          
-        
       
     </div>
     
@@ -520,134 +516,28 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lianjy357.coding.me/baymax/baymax/2019/02/23/博客的第一篇文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连佳毅">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/baymax/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="baymax">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baymax/2019/02/23/博客的第一篇文章/" itemprop="url">博客的第一篇文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T16:19:00+08:00">
-                2019-02-23
-              </time>
+              <a href="/baymax/2019/02/23/博客的第一篇文章/" rel="next" title="博客的第一篇文章">
+                <i class="fa fa-chevron-left"></i> 博客的第一篇文章
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><p>总算搭建自己的网站，虽然非常的简陋，但可以书写文章，也就足够了。</p>
-<h1 id="博客地址"><a href="#博客地址" class="headerlink" title="博客地址"></a>博客地址</h1><p>博客地址使用的腾讯云的地址，使用的是我自己配置的<code>pages 服务</code>功能。</p>
-<h1 id="博客代码要求"><a href="#博客代码要求" class="headerlink" title="博客代码要求"></a>博客代码要求</h1><p>博客的代码要求<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># index.py</span></span><br><span class="line">print(<span class="string">'这是输出的内容'</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -657,138 +547,11 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lianjy357.coding.me/baymax/baymax/2019/02/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连佳毅">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/baymax/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="baymax">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baymax/2019/02/20/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T22:20:36+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -796,6 +559,10 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
 
 
           
+
+  
+
+
 
         </div>
         
@@ -816,8 +583,17 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -859,6 +635,22 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#datetime处理日期"><span class="nav-number">1.</span> <span class="nav-text">datetime处理日期</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串和时间的转化"><span class="nav-number">1.1.</span> <span class="nav-text">字符串和时间的转化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用NumPy库处理日期"><span class="nav-number">2.</span> <span class="nav-text">使用NumPy库处理日期</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1006,6 +798,10 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
 
 
   
+  <script type="text/javascript" src="/baymax/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/baymax/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
