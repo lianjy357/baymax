@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="baymax blog">
 
 
 
@@ -80,9 +80,10 @@
 
 
 <meta name="description" content="大白博客">
+<meta name="keywords" content="baymax,blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="baymax">
-<meta property="og:url" content="http://lianjy357.coding.me/baymax/index.html">
+<meta property="og:url" content="https://lianjy357.github.io/baymax/index.html">
 <meta property="og:site_name" content="baymax">
 <meta property="og:description" content="大白博客">
 <meta property="og:locale" content="zh-Hans">
@@ -118,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://lianjy357.coding.me/baymax/">
+  <link rel="canonical" href="https://lianjy357.github.io/baymax/">
 
 
 
@@ -160,7 +161,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -186,6 +187,26 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/baymax/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/baymax/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
           </a>
         </li>
       
@@ -232,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lianjy357.coding.me/baymax/baymax/2019/02/23/【手把手教你】时间序列之日期处理/">
+    <link itemprop="mainEntityOfPage" href="https://lianjy357.github.io/baymax/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连佳毅">
@@ -249,9 +270,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/baymax/2019/02/23/【手把手教你】时间序列之日期处理/" itemprop="url">【手把手教你】时间序列之日期处理</a></h1>
+                <a class="post-title-link" href="/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/" itemprop="url">人生的至暗时刻,拒绝瞎忙</a></h2>
         
 
         <div class="post-meta">
@@ -263,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T18:24:00+08:00">
-                2019-02-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T22:04:35+08:00">
+                2019-03-31
               </time>
             
 
@@ -273,6 +294,39 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/baymax/categories/知行合一/" itemprop="url" rel="index">
+                    <span itemprop="name">知行合一</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/baymax/categories/知行合一/致良知/" itemprop="url" rel="index">
+                    <span itemprop="name">致良知</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -303,456 +357,20 @@
       
         
           
-            <p>时间序列是金融量化分析中最常见的数据类型，记录某一变量或特征沿着时间轴而取值，比如某只股票2008-2018年日收盘价。量化分析的一个重要环节之一是基于历史数据进行分析和挖掘，试图 从历史的维度探究某一事物的变化规律或发展趋势（做预测）。目前，时间序列分析理论已经相对成熟，包括一般统计分析（如平稳性、自相关、谱分析等）、统计建模和推断、时间序列预测（包括流行的机器学习、深度学习，如LSTM模型）和滤波控制等。在使用Python分析时间序列时，经常会碰到时间日期格式处理和转换问题，尤其在可视化分析和分时期统计方面。本文作为时间序列分析的入门指引之一，将着重介绍如何利用Python处理日期和分时期统计分析，希望能起到抛砖引玉的作用。</p>
-<p>先引入数据分析和画图常用库，pandas、numpy、matplotlib以及中文乱码处理，画图也可以使用pyecharts、seaborn、bokeh等</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">%matplotlib inline</span><br><span class="line"><span class="comment"># 解决正常显示画图时出现的中文和负号</span></span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> mpl</span><br><span class="line">mpl.rcParams[<span class="string">'font.sans-serif'</span>]=[<span class="string">'SimHei'</span>]</span><br><span class="line">mpl.rcParams[<span class="string">'font.family'</span>]=<span class="string">'sans-serif'</span></span><br><span class="line">mpl.rcParams[<span class="string">'axes.unicode_minus'</span>]=<span class="keyword">False</span></span><br></pre></td></tr></table></figure>
-<h1 id="datetime处理日期"><a href="#datetime处理日期" class="headerlink" title="datetime处理日期"></a>datetime处理日期</h1><p>python常用的处理时间的库有：datetime,time,calendar。datetime库包括了date（储存日期：(年、月、日),time(储存时间：(小时、分、秒和微秒)，datetime同时包含了data和time，timedelta代表两个datetime之间的差（天、秒、微秒）。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line">now=datetime.now()</span><br><span class="line">print(<span class="string">f'当前时间：<span class="subst">&#123;now&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'<span class="subst">&#123;now.year&#125;</span>年<span class="subst">&#123;now.month&#125;</span>月<span class="subst">&#123;now.day&#125;</span>日'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>当前时间：2019-02-23 17:59:53.432863
-2019年2月23日
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">now.strftime(<span class="string">'%Y-%m-%d'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>&apos;2019-02-23&apos;
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">delta=datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">10</span>)-datetime(<span class="number">2019</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">12</span>,<span class="number">30</span>)</span><br><span class="line">delta</span><br></pre></td></tr></table></figure>
-<pre><code>datetime.timedelta(days=8, seconds=41400)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> timedelta</span><br><span class="line">start=datetime(<span class="number">2018</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line"><span class="comment">#计算50天后是哪一天</span></span><br><span class="line">start+timedelta(<span class="number">50</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>datetime.datetime(2018, 2, 20, 0, 0)
-</code></pre><h2 id="字符串和时间的转化"><a href="#字符串和时间的转化" class="headerlink" title="字符串和时间的转化"></a>字符串和时间的转化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#比如想要知道列表里两个时间字符串之间相差多少天</span></span><br><span class="line">datestr=[<span class="string">'12/20/2018'</span>,<span class="string">'12/11/2018'</span>]</span><br><span class="line">new_date=[datetime.strptime(d,<span class="string">'%m/%d/%Y'</span>) <span class="keyword">for</span> d <span class="keyword">in</span> datestr]</span><br><span class="line">new_date[<span class="number">0</span>]-new_date[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
-<pre><code>datetime.timedelta(days=9)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将datetime格式转换为常见的年（Y）月（m）日（d）格式表示</span></span><br><span class="line">[date.strftime(<span class="string">'%Y-%m-%d'</span>) <span class="keyword">for</span> date <span class="keyword">in</span> new_date]</span><br></pre></td></tr></table></figure>
-<pre><code>[&apos;2018-12-20&apos;, &apos;2018-12-11&apos;]
-</code></pre><p>datetime.strptime只能根据设定的时间格式来处理指定的字符串，如果列表里(list)包含不止一种格式的字符串，如datestr=[‘12/20/2018’,’12/11/2018’,’2018-10-18’],使用datetime.strptime就很难处理了。遇到这种情况可以引入第三方时间处理包dateutil，可以处理任意格式字符串。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> dateutil.parser <span class="keyword">import</span> parse</span><br><span class="line">datestr=[<span class="string">'12/20/2018'</span>,<span class="string">'20180210'</span>,<span class="string">'2019-01-10'</span>]</span><br><span class="line"><span class="comment">#转换成datetime格式</span></span><br><span class="line">new_d=[parse(d) <span class="keyword">for</span> d <span class="keyword">in</span> datestr]</span><br><span class="line"><span class="comment">#统一为12/20/2018格式</span></span><br><span class="line">d1=[d.strftime(<span class="string">'%m/%d/%Y'</span>) <span class="keyword">for</span> d <span class="keyword">in</span> new_d]</span><br><span class="line">d2=[d.strftime(<span class="string">'%Y%m%d'</span>) <span class="keyword">for</span> d <span class="keyword">in</span> new_d]</span><br><span class="line">d3=[d.strftime(<span class="string">'%Y-%m-%d'</span>) <span class="keyword">for</span> d <span class="keyword">in</span> new_d]</span><br><span class="line">d4=[d.strftime(<span class="string">'%y-%m-%d'</span>) <span class="keyword">for</span> d <span class="keyword">in</span> new_d]</span><br><span class="line">print(<span class="string">f'datetime格式：\n<span class="subst">&#123;new_d&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'"月/日/年"格式：\n <span class="subst">&#123;d1&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'"年月日"格式：\n<span class="subst">&#123;d2&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'"年-月-日格式"：\n<span class="subst">&#123;d3&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f'"年（后两位）-月-日"格式：\n<span class="subst">&#123;d4&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>datetime格式：
-[datetime.datetime(2018, 12, 20, 0, 0), datetime.datetime(2018, 2, 10, 0, 0), datetime.datetime(2019, 1, 10, 0, 0)]
-&quot;月/日/年&quot;格式：
- [&apos;12/20/2018&apos;, &apos;02/10/2018&apos;, &apos;01/10/2019&apos;]
-&quot;年月日&quot;格式：
-[&apos;20181220&apos;, &apos;20180210&apos;, &apos;20190110&apos;]
-&quot;年-月-日格式&quot;：
-[&apos;2018-12-20&apos;, &apos;2018-02-10&apos;, &apos;2019-01-10&apos;]
-&quot;年（后两位）-月-日&quot;格式：
-[&apos;18-12-20&apos;, &apos;18-02-10&apos;, &apos;19-01-10&apos;]
-</code></pre><h1 id="使用NumPy库处理日期"><a href="#使用NumPy库处理日期" class="headerlink" title="使用NumPy库处理日期"></a>使用NumPy库处理日期</h1><p>numpy库主要用于数组操作（线性代数分析），但在处理日期和时间数据上功能也很强大，其时间格式是datetime64</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将字符串转换成numpy格式时间</span></span><br><span class="line"><span class="comment">#注意个位前补0，如1月写成01</span></span><br><span class="line">nd=np.datetime64(<span class="string">'2019-01-10'</span>)</span><br><span class="line">nd</span><br></pre></td></tr></table></figure>
-<pre><code>numpy.datetime64(&apos;2019-01-10&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#转化为字符串</span></span><br><span class="line">np.datetime_as_string(nd)</span><br></pre></td></tr></table></figure>
-<pre><code>&apos;2019-01-10&apos;
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.datetime64(<span class="string">'1901'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>numpy.datetime64(&apos;1901&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#转化为datetime格式</span></span><br><span class="line">nd.astype(datetime)</span><br></pre></td></tr></table></figure>
-<pre><code>datetime.date(2019, 1, 10)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成时间序列</span></span><br><span class="line"><span class="comment">#默认以日为间隔，算头不算尾</span></span><br><span class="line">np.arange(<span class="string">'2019-01-05'</span>,<span class="string">'2019-01-10'</span>,dtype=<span class="string">'datetime64'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([&apos;2019-01-05&apos;, &apos;2019-01-06&apos;, &apos;2019-01-07&apos;, &apos;2019-01-08&apos;,
-       &apos;2019-01-09&apos;], dtype=&apos;datetime64[D]&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以月为间隔，生成2018年12个月</span></span><br><span class="line">np.arange(<span class="string">'2018-01-01'</span>,<span class="string">'2019-01-01'</span>,dtype=<span class="string">'datetime64[M]'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([&apos;2018-01&apos;, &apos;2018-02&apos;, &apos;2018-03&apos;, &apos;2018-04&apos;, &apos;2018-05&apos;, &apos;2018-06&apos;,
-       &apos;2018-07&apos;, &apos;2018-08&apos;, &apos;2018-09&apos;, &apos;2018-10&apos;, &apos;2018-11&apos;, &apos;2018-12&apos;],
-      dtype=&apos;datetime64[M]&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以年为间隔</span></span><br><span class="line">np.arange(<span class="string">'2015-01-01'</span>,<span class="string">'2019-01-20'</span>,dtype=<span class="string">'datetime64[Y]'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([&apos;2015&apos;, &apos;2016&apos;, &apos;2017&apos;, &apos;2018&apos;], dtype=&apos;datetime64[Y]&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以周为间隔</span></span><br><span class="line">np.arange(<span class="string">'2018-12-01'</span>,<span class="string">'2018-12-20'</span>,dtype=<span class="string">'datetime64[W]'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>array([&apos;2018-11-29&apos;, &apos;2018-12-06&apos;, &apos;2018-12-13&apos;], dtype=&apos;datetime64[W]&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设定随机种子（括号里的数字只是起标记作用）</span></span><br><span class="line">np.random.seed(<span class="number">1</span>)</span><br><span class="line"><span class="comment">#h:小时，m:分，s：秒，ms微秒</span></span><br><span class="line"><span class="comment">#生成分时</span></span><br><span class="line">x=np.arange(<span class="string">'2019-01-10T00:00:00'</span>,</span><br><span class="line"><span class="string">'2019-01-10T23:00:00'</span>,dtype=<span class="string">'datetime64[m]'</span>)</span><br><span class="line"><span class="comment">#生成标准正态分布时间序列</span></span><br><span class="line">y=np.random.standard_normal(len(x))</span><br><span class="line"><span class="comment">#设置图片大小</span></span><br><span class="line">fig=plt.figure(figsize=(<span class="number">12</span>,<span class="number">6</span>))</span><br><span class="line"><span class="comment">#将x的np.datetime转换为datetime.datetime</span></span><br><span class="line">plt.plot(x.astype(datetime),y)</span><br><span class="line">fig.autofmt_xdate()</span><br><span class="line">plt.title(<span class="string">'模拟23小时内每分钟正态分布的随机数分布'</span>)</span><br><span class="line"><span class="comment"># 将右边 上边的两条边颜色设置为空 其实就相当于抹掉这两条边</span></span><br><span class="line">ax = plt.gca()  </span><br><span class="line">ax.spines[<span class="string">'right'</span>].set_color(<span class="string">'none'</span>) </span><br><span class="line">ax.spines[<span class="string">'top'</span>].set_color(<span class="string">'none'</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<pre><code>/Users/lianjy/anaconda3/lib/python3.7/site-packages/matplotlib/font_manager.py:1331: UserWarning: findfont: Font family [&apos;sans-serif&apos;] not found. Falling back to DejaVu Sans
-  (prop.get_family(), self.defaultFamily[fontext]))
-</code></pre><p><img src="output_24_1.png" alt="png"></p>
-<blockquote>
-<p>上面的报错问题是因为我的mac字体问题，无法正确解决，先放弃，无伤大雅</p>
-</blockquote>
-<h1 id="Pandas库处理日期"><a href="#Pandas库处理日期" class="headerlink" title="Pandas库处理日期"></a>Pandas库处理日期</h1><p>Pandas库是处理时间序列的利器，pandas有着强大的日期数据处理功能，可以按日期筛选数据、按日期显示数据、按日期统计数据。pandas的实际类型主要分为timestamp（时间戳）、period（时期）和时间间隔（timedelta）,常用的日期处理函数有：pd.to_datetime(),pd.to_period(),pd.date_range(),pd.period_range；pandas的resample函数还提供了对日期样本的转换，如高低频数据转化等。</p>
-<h2 id="时间格式处理及转换"><a href="#时间格式处理及转换" class="headerlink" title="时间格式处理及转换"></a>时间格式处理及转换</h2><p>定义时间格式和不同格式之间相互转换，常用函数：</p>
-<ul>
-<li>pd.Timestamp()</li>
-<li>pd.Period()</li>
-<li>pd.to_timestamp()</li>
-<li>pd.to_datetime()</li>
-<li>pd.to_period()</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义timestamp</span></span><br><span class="line">t1=pd.Timestamp(<span class="string">'2019-01-10'</span>)</span><br><span class="line">t2=pd.Timestamp(<span class="string">'2018-12-10'</span>)</span><br><span class="line">print(<span class="string">f't1= <span class="subst">&#123;t1&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f't2= <span class="subst">&#123;t2&#125;</span>'</span>)</span><br><span class="line">print(<span class="string">f't1与t2时间间隔：<span class="subst">&#123;(t1-t2).days&#125;</span>天'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>t1= 2019-01-10 00:00:00
-t2= 2018-12-10 00:00:00
-t1与t2时间间隔：31天
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取当前时间</span></span><br><span class="line">now=pd.datetime.now()</span><br><span class="line">print(now)</span><br><span class="line">print(now.strftime(<span class="string">'%Y-%m-%d'</span>))</span><br></pre></td></tr></table></figure>
-<pre><code>2019-02-23 18:07:10.273309
-2019-02-23
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#时间间隔</span></span><br><span class="line">pd.Timedelta(days=<span class="number">5</span>, minutes=<span class="number">50</span>, seconds=<span class="number">20</span>,</span><br><span class="line">   milliseconds=<span class="number">10</span>, microseconds=<span class="number">10</span>, nanoseconds=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Timedelta(&apos;5 days 00:50:20.010010&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算当前时间往后100天的日期</span></span><br><span class="line">dt=now+pd.Timedelta(days=<span class="number">100</span>)</span><br><span class="line"><span class="comment">#只显示年月日</span></span><br><span class="line">dt.strftime(<span class="string">'%Y-%m-%d'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>&apos;2019-06-03&apos;
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义时期period，默认是A-DEC，代表年份，以12月作为最后一个月</span></span><br><span class="line">p1=pd.Period(<span class="string">'2019'</span>)</span><br><span class="line">p2=pd.Period(<span class="string">'2018'</span>)</span><br><span class="line">print(<span class="string">f'p1=<span class="subst">&#123;p1&#125;</span>年'</span>)</span><br><span class="line">print(<span class="string">f'p2=<span class="subst">&#123;p2&#125;</span>年'</span>)</span><br><span class="line">print(<span class="string">f'p1和p2间隔<span class="subst">&#123;p1-p2&#125;</span>年'</span>)</span><br><span class="line"><span class="comment">#可以直接+、-整数（代表年）</span></span><br><span class="line">print(<span class="string">f'十年前是<span class="subst">&#123;p1<span class="number">-10</span>&#125;</span>年'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>p1=2019年
-p2=2018年
-p1和p2间隔1年
-十年前是2009年
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#通过asfreq转换时期频率</span></span><br><span class="line"><span class="comment">#以第一个月算,p1前面已赋值为2019年</span></span><br><span class="line">p1.asfreq(<span class="string">'M'</span>,<span class="string">'start'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Period(&apos;2019-01&apos;, &apos;M&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#以最后一个月算</span></span><br><span class="line">p1.asfreq(<span class="string">'M'</span>,<span class="string">'end'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>Period(&apos;2019-12&apos;, &apos;M&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#财报季度</span></span><br><span class="line">p=pd.Period(<span class="string">'2019Q3'</span>,freq=<span class="string">'Q-DEC'</span>)</span><br><span class="line"><span class="comment">#起始月日</span></span><br><span class="line">print(p.asfreq(<span class="string">'D'</span>,<span class="string">'start'</span>))</span><br><span class="line"><span class="comment">#结束月日</span></span><br><span class="line">print(p.asfreq(<span class="string">'D'</span>,<span class="string">'end'</span>))</span><br></pre></td></tr></table></figure>
-<pre><code>2019-07-01
-2019-09-30
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#时间戳和时期相互转换</span></span><br><span class="line">print(p1.to_timestamp(how=<span class="string">'end'</span>))</span><br><span class="line">print(p1.to_timestamp(how=<span class="string">'start'</span>))</span><br></pre></td></tr></table></figure>
-<pre><code>2019-12-31 00:00:00
-2019-01-01 00:00:00
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#t1前面赋值为'2019-1-10'</span></span><br><span class="line"><span class="comment">#转换为月时期</span></span><br><span class="line">print(t1.to_period(<span class="string">'M'</span>))</span><br><span class="line"><span class="comment">#转换为日时期</span></span><br><span class="line">print(t1.to_period(<span class="string">'D'</span>))</span><br><span class="line">print(t1.to_period(<span class="string">'W'</span>))</span><br></pre></td></tr></table></figure>
-<pre><code>2019-01
-2019-01-10
-2019-01-07/2019-01-13
-</code></pre><h2 id="生成日期序列"><a href="#生成日期序列" class="headerlink" title="生成日期序列"></a>生成日期序列</h2><p>常用函数：pd.date_range()，生成的是DatetimeIndex格式的日期序列；pd.period_range()，生成PeriodIndex的时期日期序列。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用date_range生成日期序列</span></span><br><span class="line"><span class="comment">#如要详细了解该函数，可以使用help(pd.date_range)</span></span><br><span class="line"><span class="comment">#参数四选三：起始时间，结束时间，freq，periods</span></span><br><span class="line"><span class="comment">#freq='M'月，'D'天，'W'，周，'Y'年</span></span><br><span class="line"><span class="comment">#生成月时间序列</span></span><br><span class="line">dm = pd.date_range(<span class="string">'2018/01/01'</span>, freq=<span class="string">'M'</span>, periods=<span class="number">12</span>)</span><br><span class="line">print(<span class="string">f'生成月时间序列：\n<span class="subst">&#123;dm&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#算头不算尾</span></span><br><span class="line"><span class="comment">#生成年时间序列,默认是以12月结尾，freq='Y-DEC'</span></span><br><span class="line">dy=pd.date_range(<span class="string">'2008-01-01'</span>,<span class="string">'2019-01-10'</span>,freq=<span class="string">'Y'</span>)</span><br><span class="line">print(<span class="string">f'生成年时间序列：\n<span class="subst">&#123;dy&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#生成日时间序列</span></span><br><span class="line">dd=pd.date_range(<span class="string">'2018-01-01'</span>,freq=<span class="string">'D'</span>,periods=<span class="number">10</span>)</span><br><span class="line">print(<span class="string">f'生成日时间序列：\n<span class="subst">&#123;dd&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#生成周时间序列,默认以sunday周日作为一周最后一日</span></span><br><span class="line"><span class="comment">#如要改成周一作为第一天，freq='W-SAT'</span></span><br><span class="line">dw=pd.date_range(<span class="string">'2018-01-01'</span>,freq=<span class="string">'W'</span>,periods=<span class="number">10</span>)</span><br><span class="line">print(<span class="string">f'生成周时间序列：\n<span class="subst">&#123;dw&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>生成月时间序列：
-DatetimeIndex([&apos;2018-01-31&apos;, &apos;2018-02-28&apos;, &apos;2018-03-31&apos;, &apos;2018-04-30&apos;,
-               &apos;2018-05-31&apos;, &apos;2018-06-30&apos;, &apos;2018-07-31&apos;, &apos;2018-08-31&apos;,
-               &apos;2018-09-30&apos;, &apos;2018-10-31&apos;, &apos;2018-11-30&apos;, &apos;2018-12-31&apos;],
-              dtype=&apos;datetime64[ns]&apos;, freq=&apos;M&apos;)
-生成年时间序列：
-DatetimeIndex([&apos;2008-12-31&apos;, &apos;2009-12-31&apos;, &apos;2010-12-31&apos;, &apos;2011-12-31&apos;,
-               &apos;2012-12-31&apos;, &apos;2013-12-31&apos;, &apos;2014-12-31&apos;, &apos;2015-12-31&apos;,
-               &apos;2016-12-31&apos;, &apos;2017-12-31&apos;, &apos;2018-12-31&apos;],
-              dtype=&apos;datetime64[ns]&apos;, freq=&apos;A-DEC&apos;)
-生成日时间序列：
-DatetimeIndex([&apos;2018-01-01&apos;, &apos;2018-01-02&apos;, &apos;2018-01-03&apos;, &apos;2018-01-04&apos;,
-               &apos;2018-01-05&apos;, &apos;2018-01-06&apos;, &apos;2018-01-07&apos;, &apos;2018-01-08&apos;,
-               &apos;2018-01-09&apos;, &apos;2018-01-10&apos;],
-              dtype=&apos;datetime64[ns]&apos;, freq=&apos;D&apos;)
-生成周时间序列：
-DatetimeIndex([&apos;2018-01-07&apos;, &apos;2018-01-14&apos;, &apos;2018-01-21&apos;, &apos;2018-01-28&apos;,
-               &apos;2018-02-04&apos;, &apos;2018-02-11&apos;, &apos;2018-02-18&apos;, &apos;2018-02-25&apos;,
-               &apos;2018-03-04&apos;, &apos;2018-03-11&apos;],
-              dtype=&apos;datetime64[ns]&apos;, freq=&apos;W-SUN&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#使用period_range生成日期序列</span></span><br><span class="line"><span class="comment">#参数四选三：起始时间，结束时间，freq，periods</span></span><br><span class="line"><span class="comment">#freq='M'月，'D'天，'W'，周，'Y'年</span></span><br><span class="line"><span class="comment">#生成月时期序列</span></span><br><span class="line">dpm = pd.period_range(<span class="string">'2019/01/01'</span>, freq=<span class="string">'M'</span>, periods=<span class="number">12</span>)</span><br><span class="line">print(<span class="string">f'生成月时间序列：\n<span class="subst">&#123;dpm&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#生成年时期序列,默认是以12月结尾，freq='Y-DEC'</span></span><br><span class="line">dpy=pd.period_range(<span class="string">'2008-01-01'</span>,<span class="string">'2019-01-10'</span>,freq=<span class="string">'Y'</span>)</span><br><span class="line">print(<span class="string">f'生成年时间序列：\n<span class="subst">&#123;dpy&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#生成日时期序列</span></span><br><span class="line">dpd=pd.period_range(<span class="string">'2018-01-01'</span>,freq=<span class="string">'D'</span>,periods=<span class="number">10</span>)</span><br><span class="line">print(<span class="string">f'生成日时间序列：\n<span class="subst">&#123;dpd&#125;</span>'</span>)</span><br><span class="line"><span class="comment">#生成周时期序列,默认以sunday周日作为一周最后一日</span></span><br><span class="line"><span class="comment">#如要改成周一作为第一天，freq='W-SAT'</span></span><br><span class="line">dpw=pd.period_range(<span class="string">'2018-01-01'</span>,freq=<span class="string">'W-SUN'</span>,periods=<span class="number">10</span>)</span><br><span class="line">print(<span class="string">f'生成周时间序列：\n<span class="subst">&#123;dpw&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
-<pre><code>生成月时间序列：
-PeriodIndex([&apos;2019-01&apos;, &apos;2019-02&apos;, &apos;2019-03&apos;, &apos;2019-04&apos;, &apos;2019-05&apos;, &apos;2019-06&apos;,
-             &apos;2019-07&apos;, &apos;2019-08&apos;, &apos;2019-09&apos;, &apos;2019-10&apos;, &apos;2019-11&apos;, &apos;2019-12&apos;],
-            dtype=&apos;period[M]&apos;, freq=&apos;M&apos;)
-生成年时间序列：
-PeriodIndex([&apos;2008&apos;, &apos;2009&apos;, &apos;2010&apos;, &apos;2011&apos;, &apos;2012&apos;, &apos;2013&apos;, &apos;2014&apos;, &apos;2015&apos;,
-             &apos;2016&apos;, &apos;2017&apos;, &apos;2018&apos;, &apos;2019&apos;],
-            dtype=&apos;period[A-DEC]&apos;, freq=&apos;A-DEC&apos;)
-生成日时间序列：
-PeriodIndex([&apos;2018-01-01&apos;, &apos;2018-01-02&apos;, &apos;2018-01-03&apos;, &apos;2018-01-04&apos;,
-             &apos;2018-01-05&apos;, &apos;2018-01-06&apos;, &apos;2018-01-07&apos;, &apos;2018-01-08&apos;,
-             &apos;2018-01-09&apos;, &apos;2018-01-10&apos;],
-            dtype=&apos;period[D]&apos;, freq=&apos;D&apos;)
-生成周时间序列：
-PeriodIndex([&apos;2018-01-01/2018-01-07&apos;, &apos;2018-01-08/2018-01-14&apos;,
-             &apos;2018-01-15/2018-01-21&apos;, &apos;2018-01-22/2018-01-28&apos;,
-             &apos;2018-01-29/2018-02-04&apos;, &apos;2018-02-05/2018-02-11&apos;,
-             &apos;2018-02-12/2018-02-18&apos;, &apos;2018-02-19/2018-02-25&apos;,
-             &apos;2018-02-26/2018-03-04&apos;, &apos;2018-03-05/2018-03-11&apos;],
-            dtype=&apos;period[W-SUN]&apos;, freq=&apos;W-SUN&apos;)
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#画以时间为x轴的图,pandas的DataFrame自动将index列作为x轴</span></span><br><span class="line">np.random.seed(<span class="number">2</span>)</span><br><span class="line"><span class="comment">#生成日期序列</span></span><br><span class="line">x=pd.date_range(<span class="string">'2018/01/01'</span>,<span class="string">'2019/12/31'</span>, freq=<span class="string">'d'</span>)</span><br><span class="line"><span class="comment">#x=pd.period_range('2018/01/01','2019/12/31', freq='d')</span></span><br><span class="line"><span class="comment">#标准正态分布时间序列</span></span><br><span class="line">y=np.random.standard_normal(len(x))</span><br><span class="line"><span class="comment">#将二者转换为pandas的数据格式</span></span><br><span class="line">df=pd.DataFrame(y,columns=[<span class="string">'标准正态分布'</span>],index=x)</span><br><span class="line">df.plot(figsize=(<span class="number">12</span>,<span class="number">6</span>))</span><br><span class="line">plt.title(<span class="string">'模拟标准正态分布随机数'</span>)</span><br><span class="line">ax = plt.gca()  </span><br><span class="line">ax.spines[<span class="string">'right'</span>].set_color(<span class="string">'none'</span>) </span><br><span class="line">ax.spines[<span class="string">'top'</span>].set_color(<span class="string">'none'</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<pre><code>/Users/lianjy/anaconda3/lib/python3.7/site-packages/matplotlib/font_manager.py:1331: UserWarning: findfont: Font family [&apos;sans-serif&apos;] not found. Falling back to DejaVu Sans
-  (prop.get_family(), self.defaultFamily[fontext]))
-</code></pre><p><img src="output_44_1.png" alt="png"></p>
-<h2 id="时间样本频率转换"><a href="#时间样本频率转换" class="headerlink" title="时间样本频率转换"></a>时间样本频率转换</h2><p>时间序列样本转换主要分两种：即高频数据向低频数据转换；低频数据向高频数据转换。用场景：行情交易数据一般是高频，基本面一般是月度、季度、年度等低频数据，量化分析的时候，常常要将基本面数据和行情交易数据结合起来进行统计回归分析，这时候就要用到样本数据频率的转换了。主要函数:df.resample()，df代表pandas的DataFrame格式数据，resample方法的参数参数中，freq表示重采样频率,例如‘M’、‘5min’,Second(15)；用于产生聚合值的函数名或数组函数,例如‘mean’、‘ohlc’、np.max等,默认是‘mean’,其他常用的有:‘first’、‘last’、‘median’、‘max’、‘min’，xis=0默认是纵轴,横轴设置axis=1。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入2019年1月10日上证指数的分时数据</span></span><br><span class="line"><span class="comment">#数据来源：同花顺</span></span><br><span class="line">df=pd.read_excel(<span class="string">'Table.xlsx'</span>)</span><br><span class="line">df.head()</span><br><span class="line"></span><br><span class="line"><span class="comment">#设置时间作为索引</span></span><br><span class="line">df=df.set_index(df[<span class="string">'时间'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">#画图，pandas数据表自动将索引作为x轴</span></span><br><span class="line">df[<span class="string">'成交'</span>].plot(figsize=(<span class="number">16</span>,<span class="number">6</span>),label=<span class="string">'成交价格'</span>)</span><br><span class="line">plt.title(<span class="string">'上证综指2019年1月10日分时图'</span>,fontsize=<span class="number">15</span>)</span><br><span class="line">ax = plt.gca()  </span><br><span class="line">ax.spines[<span class="string">'right'</span>].set_color(<span class="string">'none'</span>) </span><br><span class="line">ax.spines[<span class="string">'top'</span>].set_color(<span class="string">'none'</span>)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<pre><code>---------------------------------------------------------------------------
-
-FileNotFoundError                         Traceback (most recent call last)
-
-&lt;ipython-input-63-77e8a074328e&gt; in &lt;module&gt;()
-      1 #导入2019年1月10日上证指数的分时数据
-      2 #数据来源：同花顺
-----&gt; 3 df=pd.read_excel(&apos;Table.xlsx&apos;)
-      4 df.head()
-      5 
-
-
-~/anaconda3/lib/python3.7/site-packages/pandas/util/_decorators.py in wrapper(*args, **kwargs)
-    176                 else:
-    177                     kwargs[new_arg_name] = new_arg_value
---&gt; 178             return func(*args, **kwargs)
-    179         return wrapper
-    180     return _deprecate_kwarg
-
-
-~/anaconda3/lib/python3.7/site-packages/pandas/util/_decorators.py in wrapper(*args, **kwargs)
-    176                 else:
-    177                     kwargs[new_arg_name] = new_arg_value
---&gt; 178             return func(*args, **kwargs)
-    179         return wrapper
-    180     return _deprecate_kwarg
-
-
-~/anaconda3/lib/python3.7/site-packages/pandas/io/excel.py in read_excel(io, sheet_name, header, names, index_col, usecols, squeeze, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, parse_dates, date_parser, thousands, comment, skipfooter, convert_float, **kwds)
-    305 
-    306     if not isinstance(io, ExcelFile):
---&gt; 307         io = ExcelFile(io, engine=engine)
-    308 
-    309     return io.parse(
-
-
-~/anaconda3/lib/python3.7/site-packages/pandas/io/excel.py in __init__(self, io, **kwds)
-    392             self.book = xlrd.open_workbook(file_contents=data)
-    393         elif isinstance(self._io, compat.string_types):
---&gt; 394             self.book = xlrd.open_workbook(self._io)
-    395         else:
-    396             raise ValueError(&apos;Must explicitly set engine if not passing in&apos;
-
-
-~/anaconda3/lib/python3.7/site-packages/xlrd/__init__.py in open_workbook(filename, logfile, verbosity, use_mmap, file_contents, encoding_override, formatting_info, on_demand, ragged_rows)
-    114         peek = file_contents[:peeksz]
-    115     else:
---&gt; 116         with open(filename, &quot;rb&quot;) as f:
-    117             peek = f.read(peeksz)
-    118     if peek == b&quot;PK\x03\x04&quot;: # a ZIP file
-
-
-FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
-</code></pre><p>未完待续，由于数据导入问题，无法正确的获取Table.xlsx</p>
-
           
-        
-      
-    </div>
-    
-    
-    
+文章梗概总有你迷茫的时候，请相信你的光芒即将来临。知识迭代时期，你该如何重组知识？目标明确，坚持也是一种习惯。
 
-    
+困难就想走隧道，刚开始的时候，只有后面有光，走到三分之一的时候，前后都没有光。走过三分之二，就看到光芒，直到出隧道看到希望。 ——牛文文
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lianjy357.coding.me/baymax/baymax/2019/02/23/博客的第一篇文章/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连佳毅">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/baymax/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="baymax">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baymax/2019/02/23/博客的第一篇文章/" itemprop="url">博客的第一篇文章</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-23T16:19:00+08:00">
-                2019-02-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><p>总算搭建自己的网站，虽然非常的简陋，但可以书写文章，也就足够了。</p>
-<h1 id="博客地址"><a href="#博客地址" class="headerlink" title="博客地址"></a>博客地址</h1><p>博客地址使用的腾讯云的地址，使用的是我自己配置的<code>pages 服务</code>功能。</p>
-<h1 id="博客代码要求"><a href="#博客代码要求" class="headerlink" title="博客代码要求"></a>博客代码要求</h1><p>博客的代码要求<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># index.py</span></span><br><span class="line">print(<span class="string">'这是输出的内容'</span>)</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lianjy357.coding.me/baymax/baymax/2019/02/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="连佳毅">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/baymax/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="baymax">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/baymax/2019/02/20/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-20T22:20:36+08:00">
-                2019-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+在CCTV频道有一个节目叫《开讲啦》。有一期
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -822,7 +440,7 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">连佳毅</p>
-              <p class="site-description motion-element" itemprop="description">大白博客</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -832,14 +450,32 @@ FileNotFoundError: [Errno 2] No such file or directory: &apos;Table.xlsx&apos;
               
                 <a href="/baymax/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/baymax/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/baymax/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
