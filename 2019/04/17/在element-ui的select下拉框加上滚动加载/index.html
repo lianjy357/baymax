@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="无标签,">
+  <meta name="keywords" content="vue,element-ui,滚动加载,">
 
 
 
@@ -83,20 +83,18 @@
 
 
 
-<meta name="description" content="作者：大白  文章梗概 总有你迷茫的时候，请相信你的光芒即将来临。知识迭代时期，你该如何重组知识？目标明确，坚持也是一种习惯。  困难就想走隧道，刚开始的时候，只有后面有光，走到三分之一的时候，前后都没有光。走过三分之二，就看到光芒，直到出隧道看到希望。 ——牛文文  在CCTV频道有一个节目叫《开讲啦》。有一期节目让我特别印象深刻。牛文文，这位黑马级的“中国创业者大学的校长”。 创业，并没有想">
-<meta name="keywords" content="无标签">
+<meta name="description" content="在项目中，我们需要运用到很多来自后端返回的数据。有时是上百条，有时甚至上千条。如果加上后端的多表查询或者数据量过大，这就导致在前端的显示就会及其慢，特别是在网络不好的时候更是如此。 自然，后端就做了一项非常“漂亮”的交互体验数据——分页 这不分页还好，一分页对超过10条数据之后的本来也不多，就20条，偏偏还得做个分页器。（假设为10条） 此时，如果能够像购物商城那样拖拽到底部自动加载新数据就好了。">
+<meta name="keywords" content="vue,element-ui,滚动加载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="人生的至暗时刻,拒绝瞎忙">
-<meta property="og:url" content="https://lianjy357.github.io/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/index.html">
+<meta property="og:title" content="在element-ui的select下拉框加上滚动加载">
+<meta property="og:url" content="https://lianjy357.github.io/baymax/2019/04/17/在element-ui的select下拉框加上滚动加载/index.html">
 <meta property="og:site_name" content="baymax">
-<meta property="og:description" content="作者：大白  文章梗概 总有你迷茫的时候，请相信你的光芒即将来临。知识迭代时期，你该如何重组知识？目标明确，坚持也是一种习惯。  困难就想走隧道，刚开始的时候，只有后面有光，走到三分之一的时候，前后都没有光。走过三分之二，就看到光芒，直到出隧道看到希望。 ——牛文文  在CCTV频道有一个节目叫《开讲啦》。有一期节目让我特别印象深刻。牛文文，这位黑马级的“中国创业者大学的校长”。 创业，并没有想">
+<meta property="og:description" content="在项目中，我们需要运用到很多来自后端返回的数据。有时是上百条，有时甚至上千条。如果加上后端的多表查询或者数据量过大，这就导致在前端的显示就会及其慢，特别是在网络不好的时候更是如此。 自然，后端就做了一项非常“漂亮”的交互体验数据——分页 这不分页还好，一分页对超过10条数据之后的本来也不多，就20条，偏偏还得做个分页器。（假设为10条） 此时，如果能够像购物商城那样拖拽到底部自动加载新数据就好了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://lianjy357.github.io/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/01.jpeg">
-<meta property="og:updated_time" content="2019-04-01T14:42:30.363Z">
+<meta property="og:updated_time" content="2019-04-17T14:14:21.734Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="人生的至暗时刻,拒绝瞎忙">
-<meta name="twitter:description" content="作者：大白  文章梗概 总有你迷茫的时候，请相信你的光芒即将来临。知识迭代时期，你该如何重组知识？目标明确，坚持也是一种习惯。  困难就想走隧道，刚开始的时候，只有后面有光，走到三分之一的时候，前后都没有光。走过三分之二，就看到光芒，直到出隧道看到希望。 ——牛文文  在CCTV频道有一个节目叫《开讲啦》。有一期节目让我特别印象深刻。牛文文，这位黑马级的“中国创业者大学的校长”。 创业，并没有想">
-<meta name="twitter:image" content="https://lianjy357.github.io/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/01.jpeg">
+<meta name="twitter:title" content="在element-ui的select下拉框加上滚动加载">
+<meta name="twitter:description" content="在项目中，我们需要运用到很多来自后端返回的数据。有时是上百条，有时甚至上千条。如果加上后端的多表查询或者数据量过大，这就导致在前端的显示就会及其慢，特别是在网络不好的时候更是如此。 自然，后端就做了一项非常“漂亮”的交互体验数据——分页 这不分页还好，一分页对超过10条数据之后的本来也不多，就20条，偏偏还得做个分页器。（假设为10条） 此时，如果能够像购物商城那样拖拽到底部自动加载新数据就好了。">
 
 
 
@@ -126,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://lianjy357.github.io/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/">
+  <link rel="canonical" href="https://lianjy357.github.io/baymax/2019/04/17/在element-ui的select下拉框加上滚动加载/">
 
 
 
 
 
-  <title>人生的至暗时刻,拒绝瞎忙 | baymax</title>
+  <title>在element-ui的select下拉框加上滚动加载 | baymax</title>
   
 
 
@@ -269,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://lianjy357.github.io/baymax/baymax/2019/03/31/人生的至暗时刻-拒绝瞎忙/">
+    <link itemprop="mainEntityOfPage" href="https://lianjy357.github.io/baymax/baymax/2019/04/17/在element-ui的select下拉框加上滚动加载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="连佳毅">
@@ -286,7 +284,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">人生的至暗时刻,拒绝瞎忙</h2>
+          <h2 class="post-title" itemprop="name headline">在element-ui的select下拉框加上滚动加载</h2>
         
 
         <div class="post-meta">
@@ -298,8 +296,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-31T22:04:35+08:00">
-                2019-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-17T21:38:17+08:00">
+                2019-04-17
               </time>
             
 
@@ -321,19 +319,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/baymax/categories/知行合一/" itemprop="url" rel="index">
-                    <span itemprop="name">知行合一</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/baymax/categories/知行合一/致良知/" itemprop="url" rel="index">
-                    <span itemprop="name">致良知</span>
+                  <a href="/baymax/categories/vue/" itemprop="url" rel="index">
+                    <span itemprop="name">vue</span>
                   </a>
                 </span>
 
@@ -374,33 +361,21 @@
       
 
       
-        <blockquote>
-<p>作者：大白</p>
-</blockquote>
-<h2 id="文章梗概"><a href="#文章梗概" class="headerlink" title="文章梗概"></a>文章梗概</h2><blockquote>
-<p>总有你迷茫的时候，请相信你的光芒即将来临。<br>知识迭代时期，你该如何重组知识？<br>目标明确，坚持也是一种习惯。</p>
-</blockquote>
-<p>困难就想走隧道，刚开始的时候，只有后面有光，走到三分之一的时候，前后都没有光。走过三分之二，就看到光芒，直到出隧道看到希望。 ——牛文文</p>
-<p><img src="01.jpeg" alt="牛文文在《开讲啦》"></p>
-<p>在CCTV频道有一个节目叫《开讲啦》。有一期节目让我特别印象深刻。牛文文，这位黑马级的“中国创业者大学的校长”。</p>
-<p>创业，并没有想象中那样容易，企业只有百分之几的概率才能够存活下来。就像养育孩子一样，只有足够努力和决心，才能够让孩子成为佼佼者。</p>
-<p>但孩子总会调皮，也总会在我们不经意间给我们重磅一击。有时是生病，有时是犯错，而有时更多的是恨铁不成钢。孩子会长大会堕落，企业会壮大会黑暗，那你呢？</p>
-<p>人生总有那些让你无比迷茫的事情发生，最苦难的莫过于“选择”。选择了创业，这个时期你就很难照顾家庭，选择了公务员，你的很多心中梦想只能靠边站位。每个选择都是一次如同“断舍离”的过程。选择对了，通达显赫，选择错了，凋零落魄。应该说选择是及其重要的，而在没有选择的时候，我们的心思可能因此处于迷茫的环境下。</p>
-<p>想要快速跳过迷茫期，对于急性子的人来讲，践行这种方式并认真的对待接下来的工作就对了。但对于那么心思缜密的人来讲，过长的迷茫期，或许是一种等待光芒的到来。</p>
-<h2 id="知识迷茫，但目标要坚强"><a href="#知识迷茫，但目标要坚强" class="headerlink" title="知识迷茫，但目标要坚强"></a>知识迷茫，但目标要坚强</h2><p>知识是一种需要日积月累的东西，他就如同金字塔一样，没有底层石头的堆砌是无法通往顶部的光芒。在知识的积累过程从，就如当年搭建金字塔一样十分的痛苦，你可能需要认真的从底向上的学习，从基础及薄弱的塔中央开始搭建，然后逐渐扩大外围。</p>
-<p>积累知识也是一种能力，不是今天学习的东西当天就能够熟记于心，也不是能将记住的知识融会贯通而不至于纸上谈兵。这是一种能力，也是一种方式。如果说我们能够真正的为自己的知识搭建一座高塔，那么你就能够随意取用。</p>
-<p>这就是知识。这种知识的搭建就如同金字塔一样，不管你是横向扩展还是纵向拔高，我们都能够在既定的目标内搭建起自己的金字塔，这也就是心中的目标。</p>
-<h3 id="知识碎片——横向发展"><a href="#知识碎片——横向发展" class="headerlink" title="知识碎片——横向发展"></a>知识碎片——横向发展</h3><p>有人说在这个时代，没有多少人能够真正静下心来好好的学习。知识的碎片化，信息速读的加快，导致了我们不能够在某个领域真正的做到全心全意。</p>
-<p>这种成长是一种能力，也是一种<strong>边际效用</strong>的最佳操作方式。“边际效用”在这个时代，非常有用，比如你喜欢看电影，稍微学习一点作文知识模仿别人写的影评，然后就能够快速上手电影评论了；再如编程能力不错，有喜欢写写东西，所以你就自己搭建博客系统开始写作。</p>
-<p>这就是横向发展，你只需要关注眼前的需求点就可以快速学习新的技能。但这种技能有个弊端，就是你会发现，“三天打鱼，两天晒网”是你的家常便饭。</p>
-<h3 id="知识碎片——纵向发展"><a href="#知识碎片——纵向发展" class="headerlink" title="知识碎片——纵向发展"></a>知识碎片——纵向发展</h3><p>前面说，这个时代不容易让人能够静下心来认真的沉淀自己。但也绝非不可以。</p>
+        <p>在项目中，我们需要运用到很多来自后端返回的数据。有时是上百条，有时甚至上千条。如果加上后端的多表查询或者数据量过大，这就导致在前端的显示就会及其慢，特别是在网络不好的时候更是如此。</p>
+<p>自然，后端就做了一项非常“漂亮”的交互体验数据——分页</p>
+<p>这不分页还好，一分页对超过10条数据之后的本来也不多，就20条，偏偏还得做个分页器。（假设为10条）</p>
+<p>此时，如果能够像购物商城那样拖拽到底部自动加载新数据就好了。</p>
+<p>于是《在element-ui的select下拉框加上滚动加载》诞生了。</p>
+<p>这里通过自定义封装vue指令进行封装。（什么是指令：官方指令叫v-on,v-model）</p>
+<p>以下以<code>element-ui</code>中的<code>select</code>为例：<br>在<code>main.js</code>同级别文件中添加<code>directives.js</code>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// directives.js</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"></span><br><span class="line">Vue.directive(<span class="string">'loadmore'</span>, &#123;</span><br><span class="line">  bind (el, binding) &#123;</span><br><span class="line">    <span class="comment">// 获取element-ui定义好的scroll盒子</span></span><br><span class="line">    <span class="keyword">const</span> SELECTWRAP_DOM = el.querySelector(<span class="string">'.el-select-dropdown .el-select-dropdown__wrap'</span>)</span><br><span class="line">    SELECTWRAP_DOM.addEventListener(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      </span><br><span class="line">      <span class="keyword">const</span> CONDITION = <span class="keyword">this</span>.scrollHeight - <span class="keyword">this</span>.scrollTop &lt;= <span class="keyword">this</span>.clientHeight</span><br><span class="line">      <span class="keyword">if</span> (CONDITION) &#123;</span><br><span class="line">        binding.value()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><code>v-loadmore</code>: 用于在element-ui的select下拉框加上滚动到底事件监听<br><code>scrollHeight</code> 获取元素内容高度(只读)<br><code>scrollTop</code> 获取或者设置元素的偏移值,常用于, 计算滚动条的位置, 当一个元素的容器没有产生垂直方向的滚动条, 那它的scrollTop的值默认为0.<br><code>clientHeight</code> 读取元素的可见高度(只读)<br>如果元素滚动到底, 下面等式返回true, 没有则返回false<br><code>scrollHeight</code> - <code>scrollTop</code> === <code>clientHeight</code></p>
+<p>这里运用到了滚动偏移来做监听来处理，这与聊天对话框中默认下拉到底部的原理是大同小异的，后续我会有专门的文章进行讲解。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 注册滚动条加载触发事件v-loadmore绑定</span></span><br><span class="line"><span class="keyword">import</span> directives <span class="keyword">from</span> <span class="string">'./directives'</span></span><br><span class="line">Vue.use(directives)</span><br></pre></td></tr></table></figure>
+<p>然后在组件中使用<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- vue --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">el-select</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-model</span>=<span class="string">"chatmode"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">placeholder</span>=<span class="string">"聊天模式"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">size</span>=<span class="string">"mini"</span></span></span><br><span class="line"><span class="tag">  <span class="attr">v-loadmore</span>=<span class="string">"loadMore"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-option</span></span></span><br><span class="line"><span class="tag">    <span class="attr">v-for</span>=<span class="string">"item in chatmodes"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:key</span>=<span class="string">"item.value"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:label</span>=<span class="string">"item.qa_name"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:value</span>=<span class="string">"item.qa_code"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">:disabled</span>=<span class="string">"item.disabled"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-option</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="undefined">  methods: &#123;</span></span><br><span class="line"><span class="undefined">    loadMore () &#123;</span></span><br><span class="line"><span class="javascript">      <span class="comment">// 这里写入要触发的方法</span></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>工匠精神，十年如一日。</p>
+<p>本文并非本人思路，但原作者的实现方法值得认同，在基础上详细说明使用方法<br>原文<a href="https://segmentfault.com/a/1190000014972548" target="_blank" rel="noopener">https://segmentfault.com/a/1190000014972548</a></p>
 </blockquote>
-<p>这就是典型案例。钻入其中，投其所乐。就如同搭建金字塔的高度一样，越是高耸，越是引人入胜，但越是平坦，越是如同小山丘。</p>
-<p>纵向发展需要长期持之以恒的坚持。引用我高中老师的一句话：坚强者战胜惰性。</p>
-<h3 id="知识“金字塔”"><a href="#知识“金字塔”" class="headerlink" title="知识“金字塔”"></a>知识“金字塔”</h3><p>如果你想搭建他，又高又大，那么双向发展是你必然要寻找的方向。那如何确定自己的目标呢？</p>
-<p>目标其实并不难，只需要认真的做好“金字塔”工作，自然而然就能够取得不错的成绩。</p>
 
       
     </div>
@@ -418,7 +393,11 @@
       
         <div class="post-tags">
           
-            <a href="/baymax/tags/无标签/" rel="tag"># 无标签</a>
+            <a href="/baymax/tags/vue/" rel="tag"># vue</a>
+          
+            <a href="/baymax/tags/element-ui/" rel="tag"># element-ui</a>
+          
+            <a href="/baymax/tags/滚动加载/" rel="tag"># 滚动加载</a>
           
         </div>
       
@@ -431,15 +410,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/baymax/2019/04/17/解决vue跨域axios异步通信/" rel="next" title="解决vue跨域axios异步通信">
+                <i class="fa fa-chevron-left"></i> 解决vue跨域axios异步通信
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/baymax/2019/04/07/vue速查表/生命周期钩子/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -491,17 +470,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -561,22 +531,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文章梗概"><span class="nav-number">1.</span> <span class="nav-text">文章梗概</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识迷茫，但目标要坚强"><span class="nav-number">2.</span> <span class="nav-text">知识迷茫，但目标要坚强</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#知识碎片——横向发展"><span class="nav-number">2.1.</span> <span class="nav-text">知识碎片——横向发展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识碎片——纵向发展"><span class="nav-number">2.2.</span> <span class="nav-text">知识碎片——纵向发展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识“金字塔”"><span class="nav-number">2.3.</span> <span class="nav-text">知识“金字塔”</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
